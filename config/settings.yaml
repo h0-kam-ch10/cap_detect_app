@@ -1,0 +1,20 @@
+camera:
+  device: /dev/video0
+  width: 1920
+  height: 1080
+  pixel_format: NV12
+  fps: 30
+  required_modules:
+    - imx219
+    - vin_v4l2
+
+runtime:
+  model_path: /opt/yolov8n/yolov8n_uint8.nb
+  confidence_threshold: 0.35
+  nms_threshold: 0.45
+  max_detections: 100
+
+logging:
+  print_detections: true
+  save_debug_frames: false
+  debug_dir: /tmp/cap_detect_debug

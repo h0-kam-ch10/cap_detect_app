@@ -1,0 +1,22 @@
+model:
+  name: yolov8n_uint8
+  input_width: 320
+  input_height: 320
+  input_channels: 3
+  input_layout: CHW
+  input_color: RGB
+  scale: 0.00392156862745098
+  mean:
+    - 0
+    - 0
+    - 0
+  output_candidates: 2100
+  output_channels: 6
+
+classes:
+  - class_0
+  - class_1
+
+notes:
+  - The latest best.onnx converted during testing produced output [1, 6, 2100].
+  - Update class names after confirming the training dataset labels.
