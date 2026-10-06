@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A733 Cap Detect</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <h1>A733 Cap Detect</h1>
+        <p id="clock">--</p>
+      </div>
+      <div class="actions">
+        <button id="refreshBtn" type="button">刷新状态</button>
+        <button id="runBtn" type="button">运行测试</button>
+        <button id="liveBtn" type="button">开始实时</button>
+      </div>
+    </header>
+
+    <section class="status-grid" aria-label="status">
+      <article class="metric"><span>模型</span><strong id="modelState">--</strong><small id="modelPath">--</small></article>
+      <article class="metric"><span>测试输入</span><strong id="inputState">--</strong><small id="inputPath">--</small></article>
+      <article class="metric"><span>程序</span><strong id="binaryState">--</strong><small id="binaryPath">--</small></article>
+      <article class="metric"><span>摄像头节点</span><strong id="cameraState">--</strong><small id="cameraNodes">--</small></article>
+    </section>
+
+    <section class="workbench">
+      <div class="preview">
+        <div class="preview-head"><h2>检测预览</h2><span id="previewBadge">等待数据</span></div>
+        <div class="canvas"><div class="video-stage"><img id="streamImg" alt=""><canvas id="detectCanvas" width="640" height="640"></canvas></div></div>
+      </div>
+      <aside class="panel">
+        <div class="panel-head"><h2>YOLOv8 输出</h2><span id="resultState">--</span></div>
+        <dl class="facts">
+          <div><dt>帧号</dt><dd id="frameId">--</dd></div>
+          <div><dt>时间</dt><dd id="resultTime">--</dd></div>
+          <div><dt>耗时</dt><dd id="resultElapsed">--</dd></div>
+          <div><dt>检测数</dt><dd id="detCount">--</dd></div>
+          <div><dt>类别峰值</dt><dd id="maxScore">--</dd></div>
+          <div><dt>返回码</dt><dd id="resultCode">--</dd></div>
+        </dl>
+        <div id="detList" class="det-list"></div>
+        <div class="events-head"><h2>触发事件</h2><button id="eventsBtn" type="button">刷新</button></div>
+        <div id="eventList" class="det-list"></div>
+        <pre id="resultOutput">尚未运行</pre>
+      </aside>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
