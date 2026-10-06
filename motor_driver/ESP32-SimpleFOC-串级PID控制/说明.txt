@@ -1,0 +1,10 @@
+本示例借用SimpleFOC库，屏蔽其自带的PID参数。
+硬件为esp32 lolin D32，simplefoc mini驱动板，2804电机，AS5600磁编码器，12V电源等。
+M创动工坊 mcdgf.taobao.com 配套销售
+
+原理是参考 古月居的“从零理解PID控制：小球仿真到代码实现，手把手教你掌握工业级控制算法”
+代码大部分是ChatGPT所写
+
+用于学习PID。
+
+代码亲测。
