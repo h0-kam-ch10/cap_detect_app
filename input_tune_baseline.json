@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "timestamp": "2026-07-09 07:52:02.378",
+  "frame_id": 1,
+  "elapsed_ms": 527,
+  "model": "/opt/yolov8n/police_yolov8n_dual_uint8.nb",
+  "input": "/dev/video0",
+  "snapshot": "/tmp/input_tune_baseline.jpg",
+  "raw_stats": {"elements":12600,"min":0.0032,"max":317.0398,"max_class_score":0.0096,"max_class_id":0,"max_candidate":1833,"alt_layout_max_class_score":317.0398,"alt_layout_max_class_id":1,"alt_layout_max_candidate":39,"channels":[{"min":2.4866,"max":317.0398},{"min":7.4598,"max":317.0398},{"min":4.9732,"max":258.6050},{"min":6.2165,"max":293.4172},{"min":0.0032,"max":0.0096},{"min":0.0032,"max":0.0032}]},
+  "detections": []
+}
